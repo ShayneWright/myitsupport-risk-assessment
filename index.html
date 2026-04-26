@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Risk Assessment | My IT Support USA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="intro-screen" class="panel">
+      <p class="eyebrow">My IT Support USA</p>
+      <h1>IT Risk Assessment</h1>
+      <p class="subtitle">See how prepared your business is for common IT, security, and continuity risks.</p>
+      <button id="start-btn" class="btn btn-primary">Start Assessment</button>
+    </section>
+
+    <section id="quiz-screen" class="panel hidden" aria-labelledby="question-text">
+      <p id="progress-text" class="progress"></p>
+      <h2 id="question-text" class="question"></h2>
+      <div id="choices" class="choices" role="listbox" aria-label="Answer choices"></div>
+      <button id="next-btn" class="btn btn-primary" disabled>Next</button>
+    </section>
+
+    <section id="results-screen" class="panel hidden">
+      <p class="eyebrow">Your IT Risk Score</p>
+      <p id="score-display" class="score">0%</p>
+      <h2 id="category-display"></h2>
+      <p id="summary-display" class="summary"></p>
+
+      <div id="lead-gate" class="gate">
+        <h3>Want your detailed guidance?</h3>
+        <p>Your score gives you the big picture. Your detailed guidance explains what your answers may mean and where your biggest gaps may be.</p>
+
+        <form id="lead-form" novalidate>
+          <label>Full Name *
+            <input type="text" name="full_name" required autocomplete="name" placeholder="Enter your full name" />
+          </label>
+          <label>Company Name *
+            <input type="text" name="company_name" required autocomplete="organization" placeholder="Enter a company name" />
+          </label>
+          <label>Email *
+            <input type="email" name="email" required autocomplete="email" placeholder="Enter your email" />
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" autocomplete="tel" placeholder="Enter your phone number" />
+          </label>
+          <label>Company Size
+            <input type="text" name="company_size" placeholder="Example: 25 employees" />
+          </label>
+
+          <p id="submit-status" class="status" role="status" aria-live="polite"></p>
+          <button id="submit-btn" type="submit" class="btn btn-primary">Show My Detailed Guidance</button>
+        </form>
+      </div>
+
+      <section id="guidance-section" class="hidden">
+        <h3>Your Detailed Guidance</h3>
+        <div id="guidance-list" class="guidance-list"></div>
+
+        <div class="actions">
+          <button id="copy-summary-btn" class="btn btn-secondary" type="button">Copy Lead Summary</button>
+        </div>
+
+        <div class="cta-panel">
+          <h3>Want help prioritizing what matters most?</h3>
+          <p>Your score gives you the big picture, but the next step is understanding which risks should be addressed first.</p>
+          <a class="btn btn-primary" href="https://www.myitsupportusa.com/free-consultation">Book a Free Consultation</a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
